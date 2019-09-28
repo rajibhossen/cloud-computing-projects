@@ -1,0 +1,6 @@
+To install
+> mvn install
+To run, go to the project directory
+> cd projects
+> cd project1
+> ~/projects/hadoop-2.6.5/bin/hadoop jar target/*.jar KMeans points-small.txt centroids.txt output
