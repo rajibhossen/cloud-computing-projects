@@ -2,6 +2,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -91,7 +92,6 @@ public class KMeans {
                 if(distance < closest){
                     closest = distance;
                     closest_point = centroid;
-                    //System.out.println("Minimum distance from Point: " + input + " to centroid: " + centroid + " is: " + distance);
                 }
             }
             context.write(closest_point, input);
